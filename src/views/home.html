@@ -6,6 +6,30 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>hello there</h1>
+    <div class="container">
+      <div class="header card">
+        <div class="left-header">
+          <h1 id="current-temperature">56</h1>
+          <img
+            src="/"
+            alt="current weather icon"
+            class="current-weather-icon"
+          />
+          <h2 id="current-location">Manhatten, New York</h2>
+        </div>
+        <div class="right-header">
+          <div class="searchbar">
+            <input type="text" />
+            <img src="/" alt="search icon" class="search-icon" />
+          </div>
+          <div class="current-date-and-time">
+            <h2 id="current-time">8:00PM</h2>
+            <h2 id="current-date">Sunday December 31st, 2023</h2>
+          </div>
+        </div>
+      </div>
+      <div class="current-conditions card"></div>
+      <div class="daily-forecast card"></div>
+    </div>
   </body>
 </html>
