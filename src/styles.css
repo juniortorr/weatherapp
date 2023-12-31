@@ -132,6 +132,7 @@ body {
   background-image: url('./images/weatherBackground.jpg');
   background-position: center;
   background-size: cover;
+  font-family: sans-serif;
 }
 
 .container {
@@ -257,12 +258,13 @@ body {
 
 .daily-forecast-card-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 10px;
-  height: 75%;
+  height: 70%;
 }
 .daily-forecast-title {
   font-size: 30px;
+  font-weight: bold;
 }
 .daily-forecast-card {
   display: flex;
@@ -271,8 +273,9 @@ body {
   align-items: center;
   height: 100%;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
+  width: 32%;
 }
 #day {
   font-size: 22px;
