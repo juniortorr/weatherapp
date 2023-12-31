@@ -14,6 +14,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$i/,
+        use: 'html-loader',
+      },
+      {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
@@ -24,6 +28,9 @@ module.exports = {
       {
         test: /\.(plug|svg|jpg|jpeg|gif|png)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]',
+        },
       },
       {
         test: /\.(woff|woff2|eot|tff|otf)$/i,
@@ -59,6 +66,5 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     filename: 'main.js',
-    assetModuleFilename: 'images/[name]',
   },
 };
