@@ -1,5 +1,5 @@
 import './styles.css';
-import './images/drop.png';
+import './images/importImages';
 
 // const img = document.querySelector('.chance-of-rain-icon');
 // img.src = Icon;
