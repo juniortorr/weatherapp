@@ -1,6 +1,3 @@
-# basicProjectSetup
-- a basic setup for: 
-  - webpack
-  - eslint
-  - development enviroment
-  - basic loaders/plugins
+#weather app 
+  - a basic weather app based on free weather api
+  - main goal is to practice await & async
