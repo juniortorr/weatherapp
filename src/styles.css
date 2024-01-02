@@ -168,6 +168,11 @@ body {
   background-color: rgb(255, 255, 255, 0);
   height: 30px;
 }
+
+.search-icon {
+  width: 20px;
+  margin-left: 10px;
+}
 .current-date-and-time {
   text-align: right;
 }
