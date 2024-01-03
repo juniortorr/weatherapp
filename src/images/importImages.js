@@ -3,3 +3,4 @@ import './humidity.png';
 import './temperature.png';
 import './wind.png';
 import './magnifier.png';
+import './wind-vane.png';

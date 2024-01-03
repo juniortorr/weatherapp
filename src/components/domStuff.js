@@ -10,13 +10,19 @@ const currentConditionsFeelsLike = document.querySelector('#current-conditions-f
 const currentConditionsHumidity = document.querySelector('#current-conditions-humidity');
 const currentConditionsWindspeed = document.querySelector('#current-conditions-windspeed');
 const currentConditionsText = document.querySelector('#current-conditions-heading');
+const currentConditionsWindDirection = document.querySelector('#current-conditions-wind-direction');
 const currentHighTemp = document.querySelector('#current-high-temp');
 const currentLowTemp = document.querySelector('#current-low-temp');
 const dailyForecastCards = document.querySelectorAll('.daily-forecast-card');
 
 const setLocalDateAndTime = (date) => {
   const localDateAndTime = date.split(' ');
-  const localDate = format(new Date(localDateAndTime[0]), 'PPPP');
+  let localDateFormatted = localDateAndTime[0].split('-');
+  localDateFormatted = [localDateFormatted[1], localDateFormatted[2], localDateFormatted[0]].join(
+    '-'
+  );
+  console.log(localDateFormatted);
+  const localDate = format(new Date(localDateFormatted), 'PPPP');
   const localTime = localDateAndTime[1];
   currentDate.textContent = localDate;
   currentTime.textContent = localTime;
@@ -31,6 +37,7 @@ const setCurrentValues = (response) => {
   currentConditionsFeelsLike.textContent = response.current.feelslike_f;
   currentConditionsHumidity.textContent = `${response.current.humidity}%`;
   currentConditionsWindspeed.textContent = `${response.current.wind_mph}`;
+  currentConditionsWindDirection.textContent = response.current.wind_dir;
   currentHighTemp.textContent = `${response.forecast.forecastday[0].day.maxtemp_f}`;
   currentLowTemp.textContent = `${response.forecast.forecastday[0].day.mintemp_f}`;
   setLocalDateAndTime(response.location.localtime);
@@ -43,12 +50,21 @@ const setDailyCardStats = (card, day) => {
   const forecastHigh = card.querySelector('#forecast-high');
   const forecastLow = card.querySelector('#forecast-low');
   const forecastHumidity = card.querySelector('#forecast-humidity');
-  const forcastWindSpeed = card.querySelector('#forecast-windspeed');
+  const forecastWindSpeed = card.querySelector('#forecast-windspeed');
+  const forecastChanceOfRain = card.querySelector('#forecast-chance-of-rain');
+  forecastDay.textContent = day.date;
+  forecastText.textContent = day.day.condition.text;
+  forecastIcon.src = day.day.condition.icon;
+  forecastHigh.textContent = `H: ${day.day.maxtemp_f}`;
+  forecastLow.textContent = `L: ${day.day.mintemp_f}`;
+  forecastHumidity.textContent = `${day.day.avghumidity}%`;
+  forecastWindSpeed.textContent = day.day.maxwind_mph;
+  forecastChanceOfRain.textContent = `${day.day.daily_chance_of_rain}%`;
 };
 
 const setForecastValues = (response) => {
-  for (let i = 0; i <= dailyForecastCards.length; i++) {
-    for (let j = 0; j <= response.forecast.forecastday.length; j++) {
+  for (let i = 0; i < dailyForecastCards.length; i++) {
+    for (let j = 0; j < response.forecast.forecastday.length; j++) {
       if (j === i) {
         setDailyCardStats(dailyForecastCards[i], response.forecast.forecastday[i]);
       }
