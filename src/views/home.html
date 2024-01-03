@@ -9,7 +9,10 @@
     <div class="container">
       <div class="header card">
         <div class="left-header">
-          <h1 id="current-temperature">56</h1>
+          <div class="temperatureWrapper">
+            <h1 id="current-temperature">56</h1>
+            <span id="degree">&#8457;</span>
+          </div>
           <img src="/" alt="current weather icon" id="current-weather-icon" />
           <h2 id="current-location">Manhatten, New York</h2>
         </div>
@@ -36,7 +39,10 @@
             <div class="current-conditions-stats-wrapper">
               <img src="../images/temperature.png" class="feels-like-icon" alt="feels-like-icon" />
               <p>Feels Like:</p>
-              <p id="current-conditions-feels-like">23</p>
+              <div class="temperatureWrapper">
+                <p id="current-conditions-feels-like">23</p>
+                <span id="degree">&#8457;</span>
+              </div>
             </div>
 
             <div class="current-conditions-stats-wrapper">
@@ -51,7 +57,10 @@
 
             <div class="current-temp-wrapper">
               <h1>H:</h1>
-              <p id="current-high-temp">65</p>
+              <div class="temperatureWrapper">
+                <p id="current-high-temp">65</p>
+                <span id="degree">&#8457;</span>
+              </div>
             </div>
           </div>
           <!-- right side current conditions -->
@@ -70,7 +79,10 @@
 
             <div class="current-temp-wrapper">
               <h1>L:</h1>
-              <p id="current-low-temp">65</p>
+              <div class="temperatureWrapper">
+                <p id="current-low-temp">65</p>
+                <span id="degree">&#8457;</span>
+              </div>
             </div>
           </div>
         </div>
@@ -85,8 +97,14 @@
             <p id="forecast-weather-text">partly cloudy with a chance of rain</p>
             <div class="forecast-stats-wrapper">
               <div class="forecast-stat-card">
-                <h1 id="forecast-high">H: 64</h1>
-                <h1 id="forecast-low">L: 34</h1>
+                <div class="temperatureWrapper">
+                  <h1 id="forecast-high">H: 64</h1>
+                  <span id="degree">&#8457;</span>
+                </div>
+                <div class="temperatureWrapper">
+                  <h1 id="forecast-low">L: 34</h1>
+                  <span id="degree">&#8457;</span>
+                </div>
               </div>
               <div class="forecast-stat-card">
                 <img src="../images/humidity.png" alt="humidity icon" />
@@ -111,8 +129,14 @@
             <p id="forecast-weather-text">partly cloudy with a chance of rain</p>
             <div class="forecast-stats-wrapper">
               <div class="forecast-stat-card">
-                <h1 id="forecast-high">H: 64</h1>
-                <h1 id="forecast-low">L: 34</h1>
+                <div class="temperatureWrapper">
+                  <h1 id="forecast-high">H: 64</h1>
+                  <span id="degree">&#8457;</span>
+                </div>
+                <div class="temperatureWrapper">
+                  <h1 id="forecast-low">L: 34</h1>
+                  <span id="degree">&#8457;</span>
+                </div>
               </div>
               <div class="forecast-stat-card">
                 <img src="../images/humidity.png" alt="humidity icon" />
@@ -137,8 +161,14 @@
             <p id="forecast-weather-text">partly cloudy with a chance of rain</p>
             <div class="forecast-stats-wrapper">
               <div class="forecast-stat-card">
-                <h1 id="forecast-high">H: 64</h1>
-                <h1 id="forecast-low">L: 34</h1>
+                <div class="temperatureWrapper">
+                  <h1 id="forecast-high">H: 64</h1>
+                  <span id="degree">&#8457;</span>
+                </div>
+                <div class="temperatureWrapper">
+                  <h1 id="forecast-low">L: 34</h1>
+                  <span id="degree">&#8457;</span>
+                </div>
               </div>
               <div class="forecast-stat-card">
                 <img src="../images/humidity.png" alt="humidity icon" />

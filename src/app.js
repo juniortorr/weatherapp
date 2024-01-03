@@ -6,6 +6,8 @@ import { setCurrentValues, setForecastValues } from './components/domStuff';
 const searchInput = document.querySelector('input');
 const searchIcon = document.querySelector('.search-icon');
 
+searchInput.value = 'Boston';
+
 async function handleSearchLocation() {
   try {
     const location = searchInput.value;
@@ -19,5 +21,7 @@ async function handleSearchLocation() {
     alert(error.message);
   }
 }
+
+handleSearchLocation();
 
 searchIcon.addEventListener('click', handleSearchLocation);

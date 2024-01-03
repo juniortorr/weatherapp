@@ -322,3 +322,6 @@ body {
 .forecast-stat-card img {
   width: 20px;
 }
+.temperatureWrapper {
+  display: flex;
+}

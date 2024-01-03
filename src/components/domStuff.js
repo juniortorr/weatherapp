@@ -1,4 +1,7 @@
+/* eslint-disable no-plusplus */
 import format from 'date-fns/format';
+
+// fahrenheit = &#8457; celsius = <span>&#8451;</span>
 
 /* eslint-disable import/prefer-default-export */
 const currentTemp = document.querySelector('#current-temperature');
@@ -28,8 +31,15 @@ const setLocalDateAndTime = (date) => {
   currentTime.textContent = localTime;
 };
 
+const getFormattedForecastDate = (day) => {
+  const formatDay = day.split('-');
+  const formattedDay = [formatDay[1], formatDay[2], formatDay[0]];
+  return format(new Date(formattedDay), 'eeee');
+};
+
 const setCurrentValues = (response) => {
   console.log(response);
+  // eslint-disable-next-line prefer-template
   currentTemp.textContent = response.current.temp_f;
   currentWeatherIcon.src = response.current.condition.icon;
   currentLocation.textContent = `${response.location.name}, ${response.location.region}`;
@@ -52,7 +62,7 @@ const setDailyCardStats = (card, day) => {
   const forecastHumidity = card.querySelector('#forecast-humidity');
   const forecastWindSpeed = card.querySelector('#forecast-windspeed');
   const forecastChanceOfRain = card.querySelector('#forecast-chance-of-rain');
-  forecastDay.textContent = day.date;
+  forecastDay.textContent = getFormattedForecastDate(day.date);
   forecastText.textContent = day.day.condition.text;
   forecastIcon.src = day.day.condition.icon;
   forecastHigh.textContent = `H: ${day.day.maxtemp_f}`;
