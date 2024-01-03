@@ -176,6 +176,10 @@ body {
 .current-date-and-time {
   text-align: right;
 }
+
+#current-weather-icon {
+  width: 100px;
+}
 .left-header,
 .right-header {
   display: flex;
