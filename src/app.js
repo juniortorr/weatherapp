@@ -5,6 +5,7 @@ import { setCurrentValues, setForecastValues } from './components/domStuff';
 
 const searchInput = document.querySelector('input');
 const searchIcon = document.querySelector('.search-icon');
+const degreeSlider = document.querySelector('.degree-slider');
 
 searchInput.value = 'Boston';
 
@@ -25,3 +26,4 @@ async function handleSearchLocation() {
 handleSearchLocation();
 
 searchIcon.addEventListener('click', handleSearchLocation);
+// degreeSlider.addEventListener('click', handleDegreeChange);
