@@ -10,12 +10,12 @@
       <div class="header card">
         <div class="left-header">
           <div class="temperatureWrapper">
-            <h1 id="current-temperature">56</h1>
+            <h1 class="current-temp-toggle" id="current-temperature">56</h1>
             <span id="degree">&#8457;</span>
-            <div class="degree-slider" value="farenheit">
+            <div class="degree-slider">
               <p>F</p>
               <p>C</p>
-              <div class="slider"></div>
+              <div class="slider" degree="fahrenheit"></div>
             </div>
           </div>
           <img src="/" alt="current weather icon" id="current-weather-icon" />
@@ -63,7 +63,7 @@
             <div class="current-temp-wrapper">
               <h1>H:</h1>
               <div class="temperatureWrapper">
-                <p id="current-high-temp">65</p>
+                <p class="current-high-temp-toggle" id="current-high-temp">65</p>
                 <span id="degree">&#8457;</span>
               </div>
             </div>
@@ -85,7 +85,7 @@
             <div class="current-temp-wrapper">
               <h1>L:</h1>
               <div class="temperatureWrapper">
-                <p id="current-low-temp">65</p>
+                <p class="current-low-temp-toggle" id="current-low-temp">65</p>
                 <span id="degree">&#8457;</span>
               </div>
             </div>
@@ -103,11 +103,13 @@
             <div class="forecast-stats-wrapper">
               <div class="forecast-stat-card">
                 <div class="temperatureWrapper">
-                  <h1 id="forecast-high">H: 64</h1>
+                  <p>H:</p>
+                  <h1 class="high-temp-toggle" id="forecast-high">64</h1>
                   <span id="degree">&#8457;</span>
                 </div>
                 <div class="temperatureWrapper">
-                  <h1 id="forecast-low">L: 34</h1>
+                  <p>L:</p>
+                  <h1 class="low-temp-toggle" id="forecast-low">34</h1>
                   <span id="degree">&#8457;</span>
                 </div>
               </div>
@@ -135,11 +137,13 @@
             <div class="forecast-stats-wrapper">
               <div class="forecast-stat-card">
                 <div class="temperatureWrapper">
-                  <h1 id="forecast-high">H: 64</h1>
+                  <p>H:</p>
+                  <h1 class="high-temp-toggle" id="forecast-high">64</h1>
                   <span id="degree">&#8457;</span>
                 </div>
                 <div class="temperatureWrapper">
-                  <h1 id="forecast-low">L: 34</h1>
+                  <p>L:</p>
+                  <h1 class="low-temp-toggle" id="forecast-low">34</h1>
                   <span id="degree">&#8457;</span>
                 </div>
               </div>
@@ -167,11 +171,13 @@
             <div class="forecast-stats-wrapper">
               <div class="forecast-stat-card">
                 <div class="temperatureWrapper">
-                  <h1 id="forecast-high">H: 64</h1>
+                  <p>H:</p>
+                  <h1 class="high-temp-toggle" id="forecast-high">64</h1>
                   <span id="degree">&#8457;</span>
                 </div>
                 <div class="temperatureWrapper">
-                  <h1 id="forecast-low">L: 34</h1>
+                  <p>L:</p>
+                  <h1 class="low-temp-toggle" id="forecast-low">34</h1>
                   <span id="degree">&#8457;</span>
                 </div>
               </div>
@@ -195,5 +201,6 @@
         </div>
       </div>
     </div>
+    <div class="loader"></div>
   </body>
 </html>

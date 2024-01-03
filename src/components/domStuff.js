@@ -65,8 +65,8 @@ const setDailyCardStats = (card, day) => {
   forecastDay.textContent = getFormattedForecastDate(day.date);
   forecastText.textContent = day.day.condition.text;
   forecastIcon.src = day.day.condition.icon;
-  forecastHigh.textContent = `H: ${day.day.maxtemp_f}`;
-  forecastLow.textContent = `L: ${day.day.mintemp_f}`;
+  forecastHigh.textContent = day.day.maxtemp_f;
+  forecastLow.textContent = day.day.mintemp_f;
   forecastHumidity.textContent = `${day.day.avghumidity}%`;
   forecastWindSpeed.textContent = day.day.maxwind_mph;
   forecastChanceOfRain.textContent = `${day.day.daily_chance_of_rain}%`;

@@ -216,6 +216,12 @@ body {
   left: 0;
   height: 100%;
   border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+
+.celsius {
+  left: 50%;
+  right: 0;
 }
 
 .current-conditions {
@@ -305,7 +311,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   gap: 10px;
-  height: 73%;
+  height: 75%;
 }
 .daily-forecast-title {
   font-size: 30px;
@@ -334,7 +340,7 @@ body {
   text-align: center;
 }
 #forecast-weather-icon {
-  width: 100px;
+  width: 75px;
 }
 .forecast-stats-wrapper {
   display: flex;
@@ -358,4 +364,15 @@ body {
 }
 .temperatureWrapper {
   display: flex;
+}
+.hidden {
+  display: none;
+}
+.loader {
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
