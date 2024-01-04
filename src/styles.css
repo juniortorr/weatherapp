@@ -133,6 +133,8 @@ body {
   background-position: center;
   background-size: cover;
   font-family: sans-serif;
+  min-width: 1400px;
+  min-height: 725px;
 }
 
 .container {
@@ -145,6 +147,8 @@ body {
   gap: 20px;
   justify-content: center;
   z-index: 2;
+  min-width: 1400px;
+  min-height: 725px;
 }
 
 .header {
@@ -369,10 +373,30 @@ body {
   display: none;
 }
 .loader {
+  z-index: 3;
+  width: 20%;
+  height: 100%;
+  background-color: #1c271e;
+  animation-name: loading;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.loaderWrapper {
+  z-index: 3;
   width: 400px;
-  height: 400px;
-  background-color: red;
+  height: 50px;
+  background-color: lightgrey;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 40%;
+  top: 40%;
+}
+
+@keyframes loading {
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
 }
